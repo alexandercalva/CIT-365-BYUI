@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MathQuiz
-{
+{      //program
     public partial class Form1 : Form
     {
         // Create a Random object called randomizer 
