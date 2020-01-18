@@ -1,0 +1,18 @@
+D:\Marco Antonio MGDA\Documents\GitHub\cit365\Week2\MathQuiz\bin\Debug\MathQuiz.exe.config
+D:\Marco Antonio MGDA\Documents\GitHub\cit365\Week2\MathQuiz\bin\Debug\MathQuiz.exe
+D:\Marco Antonio MGDA\Documents\GitHub\cit365\Week2\MathQuiz\bin\Debug\MathQuiz.pdb
+D:\Marco Antonio MGDA\Documents\GitHub\cit365\Week2\MathQuiz\obj\Debug\MathQuiz.csprojAssemblyReference.cache
+D:\Marco Antonio MGDA\Documents\GitHub\cit365\Week2\MathQuiz\obj\Debug\MathQuiz.Properties.Resources.resources
+D:\Marco Antonio MGDA\Documents\GitHub\cit365\Week2\MathQuiz\obj\Debug\MathQuiz.csproj.GenerateResource.cache
+D:\Marco Antonio MGDA\Documents\GitHub\cit365\Week2\MathQuiz\obj\Debug\MathQuiz.exe
+D:\Marco Antonio MGDA\Documents\GitHub\cit365\Week2\MathQuiz\obj\Debug\MathQuiz.pdb
+D:\Marco Antonio MGDA\Documents\GitHub\cit365\Week2\MathQuiz\obj\Debug\MathQuiz.Form1.resources
+C:\Users\Alexander\source\repos\CIT-365-BYUI\Week2\MathQuiz\bin\Debug\MathQuiz.exe.config
+C:\Users\Alexander\source\repos\CIT-365-BYUI\Week2\MathQuiz\bin\Debug\MathQuiz.exe
+C:\Users\Alexander\source\repos\CIT-365-BYUI\Week2\MathQuiz\bin\Debug\MathQuiz.pdb
+C:\Users\Alexander\source\repos\CIT-365-BYUI\Week2\MathQuiz\obj\Debug\MathQuiz.csprojAssemblyReference.cache
+C:\Users\Alexander\source\repos\CIT-365-BYUI\Week2\MathQuiz\obj\Debug\MathQuiz.Form1.resources
+C:\Users\Alexander\source\repos\CIT-365-BYUI\Week2\MathQuiz\obj\Debug\MathQuiz.Properties.Resources.resources
+C:\Users\Alexander\source\repos\CIT-365-BYUI\Week2\MathQuiz\obj\Debug\MathQuiz.csproj.GenerateResource.cache
+C:\Users\Alexander\source\repos\CIT-365-BYUI\Week2\MathQuiz\obj\Debug\MathQuiz.exe
+C:\Users\Alexander\source\repos\CIT-365-BYUI\Week2\MathQuiz\obj\Debug\MathQuiz.pdb
