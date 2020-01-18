@@ -201,5 +201,11 @@ namespace MathQuiz
         {
 
         }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            
+            label5.Text = DateTime.Now.ToString("dd MMMM yyyy");
+        }
     }
 }
