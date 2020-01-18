@@ -140,6 +140,7 @@ namespace MathQuiz
             quotient.Enabled = true;
             StartTheQuiz();
             startButton.Enabled = false;
+            timeLabel.BackColor = Color.White;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -160,13 +161,17 @@ namespace MathQuiz
                 // down. Decrease the time left by one second and 
                 // display the new time left by updating the 
                 // Time Left label.
+                
                 timeLeft--;
                 timeLabel.Text = timeLeft + " seconds";
+                if(timeLeft <= 5)
+                    timeLabel.BackColor = Color.Red;
             }
             else
             {
                 // If the user ran out of time, stop the timer, show 
                 // a MessageBox, and fill in the answers.
+                timeLabel.BackColor = Color.Red;
                 timer1.Stop();
                 timeLabel.Text = "Time's up!";
                 MessageBox.Show("You didn't finish in time.", "Sorry!");
