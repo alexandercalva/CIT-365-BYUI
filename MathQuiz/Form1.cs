@@ -140,11 +140,9 @@ namespace MathQuiz
             quotient.Enabled = true;
             StartTheQuiz();
             startButton.Enabled = false;
-<<<<<<< HEAD
+
             timeLabel.BackColor = Color.White; // Reset the timeLabel/ white color
-=======
-            timeLabel.BackColor = Color.White; // Reset timeLabel to white color
->>>>>>> 9814ad9effb23cab0085d4404072ed29f23a866e
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
