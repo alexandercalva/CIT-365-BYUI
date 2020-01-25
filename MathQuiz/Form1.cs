@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MathQuiz
-{
+{       
     public partial class Form1 : Form
     {
         // Create a Random object called randomizer 
@@ -140,7 +140,9 @@ namespace MathQuiz
             quotient.Enabled = true;
             StartTheQuiz();
             startButton.Enabled = false;
-            timeLabel.BackColor = Color.White; // Reset timeLabel to white color
+
+            timeLabel.BackColor = Color.White; // Reset the timeLabel/ white color
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -198,6 +200,12 @@ namespace MathQuiz
         private void quotient_ValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            
+            label5.Text = DateTime.Now.ToString("dd MMMM yyyy");
         }
     }
 }
