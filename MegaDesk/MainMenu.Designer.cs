@@ -28,17 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
             this.newQuote = new System.Windows.Forms.Button();
             this.viewQuotes = new System.Windows.Forms.Button();
             this.searchQuotes = new System.Windows.Forms.Button();
             this.exit = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // newQuote
             // 
             this.newQuote.AllowDrop = true;
-            this.newQuote.AutoEllipsis = true;
             this.newQuote.AutoSize = true;
             this.newQuote.BackColor = System.Drawing.Color.Beige;
             this.newQuote.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -56,7 +58,6 @@
             // viewQuotes
             // 
             this.viewQuotes.AllowDrop = true;
-            this.viewQuotes.AutoEllipsis = true;
             this.viewQuotes.AutoSize = true;
             this.viewQuotes.BackColor = System.Drawing.Color.Beige;
             this.viewQuotes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -75,7 +76,6 @@
             // searchQuotes
             // 
             this.searchQuotes.AllowDrop = true;
-            this.searchQuotes.AutoEllipsis = true;
             this.searchQuotes.AutoSize = true;
             this.searchQuotes.BackColor = System.Drawing.Color.Beige;
             this.searchQuotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -93,7 +93,6 @@
             // exit
             // 
             this.exit.AllowDrop = true;
-            this.exit.AutoEllipsis = true;
             this.exit.AutoSize = true;
             this.exit.BackColor = System.Drawing.Color.Beige;
             this.exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -108,6 +107,21 @@
             this.exit.UseVisualStyleBackColor = false;
             this.exit.Click += new System.EventHandler(this.exit_Click);
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(24, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(30, 13);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Date";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -116,6 +130,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(630, 378);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.exit);
             this.Controls.Add(this.searchQuotes);
             this.Controls.Add(this.viewQuotes);
@@ -138,6 +153,8 @@
         private System.Windows.Forms.Button viewQuotes;
         private System.Windows.Forms.Button searchQuotes;
         private System.Windows.Forms.Button exit;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label label1;
     }
 }
 
