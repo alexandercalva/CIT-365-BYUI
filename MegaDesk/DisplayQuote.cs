@@ -28,5 +28,12 @@ namespace MegaDesk
         {
 
         }
+
+        private void backMenuAdd_Click(object sender, EventArgs e)
+        {
+            Form exit = new MainMenu();
+            exit.Show();
+            this.Close();
+        }
     }
 }

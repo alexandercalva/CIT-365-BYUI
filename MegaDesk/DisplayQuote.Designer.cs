@@ -35,6 +35,7 @@
             this.drawersText = new System.Windows.Forms.Label();
             this.materialText = new System.Windows.Forms.Label();
             this.orderText = new System.Windows.Forms.Label();
+            this.backMenuAdd = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // backMenuDisplay
@@ -44,7 +45,7 @@
             this.backMenuDisplay.Location = new System.Drawing.Point(656, 571);
             this.backMenuDisplay.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.backMenuDisplay.Name = "backMenuDisplay";
-            this.backMenuDisplay.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.backMenuDisplay.Padding = new System.Windows.Forms.Padding(8);
             this.backMenuDisplay.Size = new System.Drawing.Size(112, 62);
             this.backMenuDisplay.TabIndex = 0;
             this.backMenuDisplay.Text = "Menu";
@@ -78,7 +79,7 @@
             // 
             this.depthText.AutoSize = true;
             this.depthText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.depthText.Location = new System.Drawing.Point(46, 164);
+            this.depthText.Location = new System.Drawing.Point(248, 97);
             this.depthText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.depthText.Name = "depthText";
             this.depthText.Size = new System.Drawing.Size(53, 20);
@@ -89,7 +90,7 @@
             // 
             this.drawersText.AutoSize = true;
             this.drawersText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.drawersText.Location = new System.Drawing.Point(46, 236);
+            this.drawersText.Location = new System.Drawing.Point(419, 97);
             this.drawersText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.drawersText.Name = "drawersText";
             this.drawersText.Size = new System.Drawing.Size(68, 20);
@@ -100,7 +101,7 @@
             // 
             this.materialText.AutoSize = true;
             this.materialText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.materialText.Location = new System.Drawing.Point(46, 306);
+            this.materialText.Location = new System.Drawing.Point(46, 184);
             this.materialText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.materialText.Name = "materialText";
             this.materialText.Size = new System.Drawing.Size(65, 20);
@@ -111,19 +112,33 @@
             // 
             this.orderText.AutoSize = true;
             this.orderText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.orderText.Location = new System.Drawing.Point(46, 387);
+            this.orderText.Location = new System.Drawing.Point(419, 184);
             this.orderText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.orderText.Name = "orderText";
             this.orderText.Size = new System.Drawing.Size(87, 20);
             this.orderText.TabIndex = 6;
             this.orderText.Text = "Order Time";
             // 
+            // backMenuAdd
+            // 
+            this.backMenuAdd.AutoSize = true;
+            this.backMenuAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backMenuAdd.Location = new System.Drawing.Point(482, 239);
+            this.backMenuAdd.Name = "backMenuAdd";
+            this.backMenuAdd.Padding = new System.Windows.Forms.Padding(5);
+            this.backMenuAdd.Size = new System.Drawing.Size(75, 40);
+            this.backMenuAdd.TabIndex = 7;
+            this.backMenuAdd.Text = "Menu";
+            this.backMenuAdd.UseVisualStyleBackColor = true;
+            this.backMenuAdd.Click += new System.EventHandler(this.backMenuAdd_Click);
+            // 
             // DisplayQuote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(854, 683);
+            this.BackColor = System.Drawing.Color.Beige;
+            this.ClientSize = new System.Drawing.Size(569, 291);
+            this.Controls.Add(this.backMenuAdd);
             this.Controls.Add(this.orderText);
             this.Controls.Add(this.materialText);
             this.Controls.Add(this.drawersText);
@@ -150,5 +165,6 @@
         public System.Windows.Forms.Label drawersText;
         public System.Windows.Forms.Label materialText;
         public System.Windows.Forms.Label orderText;
+        private System.Windows.Forms.Button backMenuAdd;
     }
 }

@@ -121,6 +121,7 @@ namespace MegaDesk
             views.materialText.Text = "Material: " + materialBox.Text;
             views.orderText.Text = "Order: " + orderBox.Text;
             views.Show();
+            this.Hide();
         }
     }
 }
