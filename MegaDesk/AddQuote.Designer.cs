@@ -35,12 +35,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.customerBox = new System.Windows.Forms.TextBox();
+            this.widthBox = new System.Windows.Forms.TextBox();
+            this.depthBox = new System.Windows.Forms.TextBox();
+            this.drawersBox = new System.Windows.Forms.TextBox();
+            this.materialBox = new System.Windows.Forms.ComboBox();
+            this.orderBox = new System.Windows.Forms.ComboBox();
+            this.addButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // backMenuAdd
@@ -117,49 +118,66 @@
             this.label6.Text = "Order Time";
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
-            // textBox1
+            // customerBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(33, 71);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(292, 20);
-            this.textBox1.TabIndex = 8;
+            this.customerBox.Location = new System.Drawing.Point(33, 71);
+            this.customerBox.Name = "customerBox";
+            this.customerBox.Size = new System.Drawing.Size(292, 20);
+            this.customerBox.TabIndex = 8;
             // 
-            // textBox2
+            // widthBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(33, 137);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(292, 20);
-            this.textBox2.TabIndex = 9;
+            this.widthBox.Location = new System.Drawing.Point(33, 137);
+            this.widthBox.Name = "widthBox";
+            this.widthBox.Size = new System.Drawing.Size(292, 20);
+            this.widthBox.TabIndex = 9;
+            this.widthBox.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.widthBox.Validated += new System.EventHandler(this.widthInput);
             // 
-            // textBox3
+            // depthBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(33, 212);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(292, 20);
-            this.textBox3.TabIndex = 10;
+            this.depthBox.Location = new System.Drawing.Point(33, 212);
+            this.depthBox.Name = "depthBox";
+            this.depthBox.Size = new System.Drawing.Size(292, 20);
+            this.depthBox.TabIndex = 10;
+            this.depthBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DepthInput);
+            this.depthBox.Validating += new System.ComponentModel.CancelEventHandler(this.DepthNumber);
             // 
-            // textBox4
+            // drawersBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(33, 286);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(292, 20);
-            this.textBox4.TabIndex = 11;
+            this.drawersBox.Location = new System.Drawing.Point(33, 286);
+            this.drawersBox.Name = "drawersBox";
+            this.drawersBox.Size = new System.Drawing.Size(292, 20);
+            this.drawersBox.TabIndex = 11;
             // 
-            // comboBox1
+            // materialBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(33, 358);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(292, 21);
-            this.comboBox1.TabIndex = 12;
+            this.materialBox.FormattingEnabled = true;
+            this.materialBox.Location = new System.Drawing.Point(33, 358);
+            this.materialBox.Name = "materialBox";
+            this.materialBox.Size = new System.Drawing.Size(292, 21);
+            this.materialBox.TabIndex = 12;
             // 
-            // comboBox2
+            // orderBox
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(388, 70);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(83, 21);
-            this.comboBox2.TabIndex = 13;
+            this.orderBox.FormattingEnabled = true;
+            this.orderBox.Location = new System.Drawing.Point(388, 70);
+            this.orderBox.Name = "orderBox";
+            this.orderBox.Size = new System.Drawing.Size(83, 21);
+            this.orderBox.TabIndex = 13;
+            // 
+            // addButton
+            // 
+            this.addButton.AutoSize = true;
+            this.addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addButton.Location = new System.Drawing.Point(388, 392);
+            this.addButton.Name = "addButton";
+            this.addButton.Padding = new System.Windows.Forms.Padding(5);
+            this.addButton.Size = new System.Drawing.Size(75, 40);
+            this.addButton.TabIndex = 14;
+            this.addButton.Text = "Add";
+            this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
             // AddQuote
             // 
@@ -167,12 +185,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(569, 444);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.addButton);
+            this.Controls.Add(this.orderBox);
+            this.Controls.Add(this.materialBox);
+            this.Controls.Add(this.drawersBox);
+            this.Controls.Add(this.depthBox);
+            this.Controls.Add(this.widthBox);
+            this.Controls.Add(this.customerBox);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -197,11 +216,12 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.TextBox customerBox;
+        private System.Windows.Forms.TextBox widthBox;
+        private System.Windows.Forms.TextBox depthBox;
+        private System.Windows.Forms.TextBox drawersBox;
+        private System.Windows.Forms.ComboBox materialBox;
+        private System.Windows.Forms.ComboBox orderBox;
+        private System.Windows.Forms.Button addButton;
     }
 }
