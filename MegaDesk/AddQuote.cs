@@ -12,9 +12,16 @@ namespace MegaDesk
 {
     public partial class AddQuote : Form
     {
-        public AddQuote()
+        enum Material { Laminate, Oak, Rosewood, Venner, Pine }
+
+        public AddQuote()   
         {
             InitializeComponent();
+            Array ValArray = Enum.GetValues(typeof(Material));
+            foreach(Material index in ValArray)
+            {
+                materialBox.Items.Add(index);
+            }
         }
 
         private void backMenuAdd_Click(object sender, EventArgs e)
