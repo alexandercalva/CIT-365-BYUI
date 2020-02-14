@@ -13,17 +13,25 @@ namespace MegaDesk
     public partial class AddQuote : Form
     {
         enum Material { Laminate, Oak, Rosewood, Venner, Pine }
-
+       
         public AddQuote()   
         {
             InitializeComponent();
-            Array ValArray = Enum.GetValues(typeof(Material));
-            foreach(Material index in ValArray)
-            {
-                materialBox.Items.Add(index);
-            }
+
+            List<Material> MaterialList = new List<Material>();
+            
+            //Adding to List
+            foreach (Material item in Enum.GetValues(typeof(Material)))
+                MaterialList.Add(item);
+
+            //Adding to ComboBox
+            foreach (var i in MaterialList)
+                materialBox.Items.Add(i);
+
+            
         }
 
+       
         private void backMenuAdd_Click(object sender, EventArgs e)
         {
             Form exit = new MainMenu();
@@ -129,6 +137,11 @@ namespace MegaDesk
             views.orderText.Text = "Order: " + orderBox.Text;
             views.Show();
             this.Hide();
+        }
+
+        private void materialBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Material material = (Material)materialBox.SelectedItem;
         }
     }
 }

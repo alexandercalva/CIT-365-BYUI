@@ -157,6 +157,7 @@
             this.materialBox.Name = "materialBox";
             this.materialBox.Size = new System.Drawing.Size(292, 21);
             this.materialBox.TabIndex = 12;
+            this.materialBox.SelectedIndexChanged += new System.EventHandler(this.materialBox_SelectedIndexChanged);
             // 
             // orderBox
             // 
