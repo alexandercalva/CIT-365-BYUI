@@ -9,7 +9,7 @@ using System.Linq;
 
 namespace RazorPagesMovie.Models
 {
-    public static class SeedData
+    public static class SeedDataRating
     {
         public static void Initialize(IServiceProvider serviceProvider)
         {
