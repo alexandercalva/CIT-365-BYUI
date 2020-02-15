@@ -29,6 +29,8 @@ namespace RazorPagesMovie
         public string MovieGenre { get; set; }
         public async Task OnGetAsync()
         {
+
+           
             // Use LINQ to get list of genres.
             IQueryable<string> genreQuery = from m in _context.Movie
                                             orderby m.Genre
