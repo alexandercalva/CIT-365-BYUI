@@ -13,7 +13,8 @@ namespace MyScriptureJournal.Models
         public DateTime Date { get; set; }
         public string Book { get; set; }
              
-        public string Chapter { get; set; }
-        public decimal Verse { get; set; }
+        public int Chapter { get; set; }
+        public int Verse { get; set; }
+        public string Note { get; set; }
     }
 }
