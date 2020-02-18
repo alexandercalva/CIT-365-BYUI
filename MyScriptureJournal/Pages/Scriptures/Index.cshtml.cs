@@ -30,9 +30,9 @@ namespace MyScriptureJournal
         public async Task OnGetAsync()
         {
             // Use LINQ to get list of genres.
-            IQueryable<string> NoteQuery = from m in _context.Scripture
-                                            orderby m.Note
-                                            select m.Note;
+            IQueryable<string> BookQuery = from m in _context.Scripture
+                                            orderby m.Book
+                                            select m.Book;
 
 
             var scriptures = from m in _context.Scripture
@@ -47,7 +47,7 @@ namespace MyScriptureJournal
             {
                 scriptures = scriptures.Where(x => x.Note == Note);
             }
-           // Note = new SelectList(await NoteQuery.Distinct().ToListAsync());
+           Books = new SelectList(await BookQuery.Distinct().ToListAsync());
             Scripture = await scriptures.ToListAsync();
 
 
