@@ -13,10 +13,10 @@
 
 <form>
     <p>
-        <select asp-for="BookList" asp-items="Model.Book">
+        Find:  By Book <select asp-for="BookList" asp-items="Model.Book">
             <option value="" width ="200">All</option>
         </select>
-        Note: <input type="text" asp-for="NoteSearch" />
+        By Notes <input type="text" asp-for="NoteSearch" />
         <input type="submit" value="Filter" />
     </p>
    
