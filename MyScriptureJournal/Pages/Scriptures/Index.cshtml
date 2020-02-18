@@ -13,10 +13,10 @@
 
 <form>
     <p>
-        <select asp-for="Books" asp-items="Model.Books">
-            <option value="">All</option>
+        <select asp-for="BookList" asp-items="Model.Book">
+            <option value="" width ="200">All</option>
         </select>
-        Book: <input type="text" placeholder = "All Scriptures" asp-for="SearchString" />
+        Note: <input type="text" asp-for="NoteSearch" />
         <input type="submit" value="Filter" />
     </p>
    
