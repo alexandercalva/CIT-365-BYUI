@@ -20,7 +20,7 @@ namespace MyScriptureJournal
         {
             _context = context;
         }
-        [BindProperty(SupportsGet = true)]
+        
         public string BookSort { get; set; }
         public string DateSort { get; set; }
 
@@ -36,44 +36,39 @@ namespace MyScriptureJournal
         public string NoteSearch { get; set; }
         public async Task OnGetAsync(string sortOrder)
         {
-            BookSort = String.IsNullOrEmpty(sortOrder) ? "book_desc" : "";
-            DateSort = sortOrder == "Date" ? "date_desc" : "Date";
+            BookSort = sortOrder == "book_asc" ? "book_desc" : "book_asc";
+            DateSort = sortOrder == "date_asc" ? "date_desc" : "date_asc";
+            
             // Use LINQ 
-            IQueryable<Scripture> BookST = from m in _context.Scripture
-                                          
-                                        select m;
+           
             IQueryable<string> BookQuery = from m in _context.Scripture
                                             select m.Book;
             IQueryable<string> NoteQuery = from m in _context.Scripture
                                            orderby m.Note
                                            select m.Note;
-            IQueryable<DateTime> DateSortQuery = from m in _context.Scripture
-                                               orderby m.Date
-                                               select m.Date;
-
+           
+            var scriptures = from m in _context.Scripture
+                             select m;
             switch (sortOrder)
             {
                 case "book_desc":
-
-                    //BookST = BookST.OrderByDescending(s => s.Book.Contains(BookList));
-                    BookST = BookST.Where(s => s.Book.Contains(BookSort));
+                    scriptures = scriptures.OrderByDescending(s => s.Book);
                     break;
-                case "Date":
-                    BookST = BookST.OrderBy(s => s.Date);
+                case "date_asc":
+                    scriptures = scriptures.OrderBy(s => s.Date);
                     break;
                 case "date_desc":
-                    BookST = BookST.OrderByDescending(s => s.Date);
+                    scriptures = scriptures.OrderByDescending(s => s.Date);
                     break;
                 default:
-                    BookST = BookST.OrderBy(s => s.Book.Contains(BookSort));
+                    scriptures = scriptures.OrderBy(s => s.Book);
                     break;
             }
 
+            
+            ScriptureList = await scriptures.AsNoTracking().ToListAsync();
 
-           // ScriptureList = await BookST.ToListAsync();
 
-            var scriptures = from m in _context.Scripture
-                        select m;
             var note = from n in _context.Scripture select n;
            
 
@@ -97,7 +92,6 @@ namespace MyScriptureJournal
             //Note = new Search(await NoteQuery.Distinct().ToListAsync());
 
             ScriptureList = await scriptures.ToListAsync();
-
         }
     }
 }

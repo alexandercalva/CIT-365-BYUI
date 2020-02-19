@@ -28,9 +28,9 @@ namespace RazorPagesMovie.Models
                     {
                         Title = "When Harry Met Sally",
                         ReleaseDate = DateTime.Parse("1989-2-12"),
-                        Genre = "Romantic Comedy",
+                        Genre = "Romantic ComedySSSS",
                         Price = 7.99M,
-                        Rating = "R"
+                        Rating = "RRR"
                     },
                 #endregion
 
@@ -38,7 +38,7 @@ namespace RazorPagesMovie.Models
                     {
                         Title = "Ghostbusters ",
                         ReleaseDate = DateTime.Parse("1984-3-13"),
-                        Genre = "Comedy",
+                        Genre = "ComedySSS",
                         Price = 8.99M,
                         Rating = "G"
                     },
@@ -54,7 +54,7 @@ namespace RazorPagesMovie.Models
 
                     new Movie
                     {
-                        Title = "Rio Bravo",
+                        Title = "Rio BravoSSS",
                         ReleaseDate = DateTime.Parse("1959-4-15"),
                         Genre = "Western",
                         Price = 3.99M,

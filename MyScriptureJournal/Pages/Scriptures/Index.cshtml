@@ -5,7 +5,7 @@
     ViewData["Title"] = "Book";
 }
 
-<h1>LDS Journal</h1>
+<h1>Index</h1>
 
 <p>
     <a asp-page="Create">Create New</a>
@@ -31,13 +31,13 @@
             
             <th>
                 <a asp-page="./Index" asp-route-sortOrder="@Model.DateSort">
-                    @Html.DisplayNameFor(model => model.ScriptureList[0].Date)
-            
+                    @Html.DisplayNameFor(model => model.ScriptureList[0].Date) &#x23f7;
+
                 </a>
             </th>
             <th width="100">
                 <a asp-page="./Index" asp-route-sortOrder="@Model.BookSort">
-                    @Html.DisplayNameFor(model => model.ScriptureList[0].Book)
+                    @Html.DisplayNameFor(model => model.ScriptureList[0].Book) &#x23f7;
                 </a>
             </th>
             <th>
