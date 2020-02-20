@@ -4,7 +4,7 @@
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-:root {
+/*:root {
   --blue: #007bff;
   --indigo: #6610f2;
   --purple: #6f42c1;
@@ -34,7 +34,7 @@
   --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
-
+    */
 *,
 *::before,
 *::after {
@@ -88,12 +88,12 @@ p {
 abbr[title],
 abbr[data-original-title] {
   text-decoration: underline;
-  -webkit-text-decoration: underline dotted;
+  //-webkit-text-decoration: underline dotted;
   text-decoration: underline dotted;
   cursor: help;
   border-bottom: 0;
-  -webkit-text-decoration-skip-ink: none;
-  text-decoration-skip-ink: none;
+  //-webkit-text-decoration-skip-ink: none;
+  //text-decoration-skip-ink: none;
 }
 
 address {
@@ -620,9 +620,9 @@ pre code {
 }
 
 .col {
-  -ms-flex-preferred-size: 0;
+  //-ms-flex-preferred-size: 0;
   flex-basis: 0;
-  -ms-flex-positive: 1;
+  //-ms-flex-positive: 1;
   flex-grow: 1;
   max-width: 100%;
 }
@@ -827,9 +827,9 @@ pre code {
 
 @media (min-width: 576px) {
   .col-sm {
-    -ms-flex-preferred-size: 0;
+    //-ms-flex-preferred-size: 0;
     flex-basis: 0;
-    -ms-flex-positive: 1;
+    //-ms-flex-positive: 1;
     flex-grow: 1;
     max-width: 100%;
   }
@@ -999,9 +999,9 @@ pre code {
 
 @media (min-width: 768px) {
   .col-md {
-    -ms-flex-preferred-size: 0;
+    //-ms-flex-preferred-size: 0;
     flex-basis: 0;
-    -ms-flex-positive: 1;
+    //-ms-flex-positive: 1;
     flex-grow: 1;
     max-width: 100%;
   }
@@ -1171,9 +1171,9 @@ pre code {
 
 @media (min-width: 992px) {
   .col-lg {
-    -ms-flex-preferred-size: 0;
+    //-ms-flex-preferred-size: 0;
     flex-basis: 0;
-    -ms-flex-positive: 1;
+    //-ms-flex-positive: 1;
     flex-grow: 1;
     max-width: 100%;
   }
@@ -1343,9 +1343,9 @@ pre code {
 
 @media (min-width: 1200px) {
   .col-xl {
-    -ms-flex-preferred-size: 0;
+    //-ms-flex-preferred-size: 0;
     flex-basis: 0;
-    -ms-flex-positive: 1;
+   // -ms-flex-positive: 1;
     flex-grow: 1;
     max-width: 100%;
   }

@@ -14,7 +14,7 @@
 <form>
     <p>
         Find:  By Book <select asp-for="BookList" asp-items="Model.Book">
-            <option value="" width="200">All</option>
+            <option value="">All</option>
         </select>
         By Notes <input type="text" asp-for="NoteSearch" />
         <input type="submit" value="Filter" />
@@ -35,7 +35,7 @@
 
                 </a>
             </th>
-            <th width="100">
+            <th>
                 <a asp-page="./Index" asp-route-sortOrder="@Model.BookSort">
                     @Html.DisplayNameFor(model => model.ScriptureList[0].Book) &#x23f7;
                 </a>
@@ -63,13 +63,13 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.Book)
                 </td>
-                <td width="100">
+                <td>
                     @Html.DisplayFor(modelItem => item.Chapter)
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Verse)
                 </td>
-                <td width="300">
+                <td>
                     @Html.DisplayFor(modelItem => item.Note)
                 </td>
                 <td>
