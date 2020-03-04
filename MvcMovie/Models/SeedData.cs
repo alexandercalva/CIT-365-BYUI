@@ -26,6 +26,7 @@ namespace MvcMovie.Models
                         Title = "The RM",
                         ReleaseDate = DateTime.Parse("1989-2-12"),
                         Genre = "Romantic Comedy",
+                        Rating = "R",
                         Price = 7.99M
                     },
 
@@ -34,6 +35,7 @@ namespace MvcMovie.Models
                         Title = "Other Side of Heaven",
                         ReleaseDate = DateTime.Parse("1984-3-13"),
                         Genre = "Comedy",
+                        Rating = "R",
                         Price = 8.99M
                     },
 
@@ -42,6 +44,7 @@ namespace MvcMovie.Models
                         Title = "Meet the Mormons",
                         ReleaseDate = DateTime.Parse("1986-2-23"),
                         Genre = "Documental",
+                        Rating = "R",
                         Price = 9.99M
                     },
 
@@ -50,6 +53,7 @@ namespace MvcMovie.Models
                         Title = "Charly",
                         ReleaseDate = DateTime.Parse("1959-4-15"),
                         Genre = "Romantic",
+                        Rating = "R",
                         Price = 3.99M
                     }
                 );
