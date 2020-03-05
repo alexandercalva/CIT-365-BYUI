@@ -18,10 +18,11 @@ namespace MvcMovie.Controllers
         {
             _context = context;
         }
-
+        
         // GET: Movies
-        public async Task<IActionResult> Index(string movieGenre, string searchString)
+        public async Task<IActionResult> Index(string movieGenre, string searchString, string sortOrderDate)
         {
+            ViewBag.DateSort = String.IsNullOrEmpty(sortOrderDate) ? "date_desc" : "";
             // Use LINQ to get list of genres.
             IQueryable<string> genreQuery = from m in _context.Movie
                                             orderby m.Genre
@@ -29,6 +30,16 @@ namespace MvcMovie.Controllers
 
             var movies = from m in _context.Movie
                          select m;
+
+            switch (sortOrderDate)
+            {
+                case "date_desc":
+                    movies = movies.OrderByDescending(m => m.ReleaseDate);
+                    break;
+                default:
+                    movies = movies.OrderBy(m => m.ReleaseDate);
+                    break;
+            }
 
             if (!string.IsNullOrEmpty(searchString))
             {
@@ -48,7 +59,7 @@ namespace MvcMovie.Controllers
 
             return View(movieGenreVM);
         }
-
+        
         // GET: Movies/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -78,7 +89,7 @@ namespace MvcMovie.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,ReleaseDate,Genre,Price,Rating")] Movie movie)
+        public async Task<IActionResult> Create([Bind("Id,Title,ReleaseDate,Genre,Price,Rating,Image_ID")] Movie movie)
         {
             if (ModelState.IsValid)
             {

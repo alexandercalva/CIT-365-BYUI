@@ -23,38 +23,42 @@ namespace MvcMovie.Models
                 context.Movie.AddRange(
                     new Movie
                     {
-                        Title = "The RM",
-                        ReleaseDate = DateTime.Parse("1989-2-12"),
-                        Genre = "Romantic Comedy",
-                        Rating = "R",
-                        Price = 7.99M
-                    },
-
-                    new Movie
-                    {
-                        Title = "Other Side of Heaven",
-                        ReleaseDate = DateTime.Parse("1984-3-13"),
-                        Genre = "Comedy",
-                        Rating = "R",
-                        Price = 8.99M
-                    },
-
-                    new Movie
-                    {
-                        Title = "Meet the Mormons",
-                        ReleaseDate = DateTime.Parse("1986-2-23"),
-                        Genre = "Documental",
-                        Rating = "R",
-                        Price = 9.99M
-                    },
-
-                    new Movie
-                    {
-                        Title = "Charly",
-                        ReleaseDate = DateTime.Parse("1959-4-15"),
+                        Title = "Until Forever",
+                        ReleaseDate = DateTime.Parse("2016-2-12"),
                         Genre = "Romantic",
-                        Rating = "R",
-                        Price = 3.99M
+                        Rating = "PG",
+                        Price = 7.99M,
+                        Image_ID = "until_forever.jpg"
+                    },
+
+                    new Movie
+                    {
+                        Title = "17 Miracles",
+                        ReleaseDate = DateTime.Parse("2011-6-3"),
+                        Genre = "Adventure",
+                        Rating = "PG",
+                        Price = 8.99M,
+                        Image_ID = "17_miracles.jpg"
+                    },
+
+                    new Movie
+                    {
+                        Title = "States of Grace",
+                        ReleaseDate = DateTime.Parse("2005-2-23"),
+                        Genre = "Drama",
+                        Rating = "PG-13",
+                        Price = 9.99M,
+                        Image_ID = "states_of_grace.jpg"
+                    },
+
+                    new Movie
+                    {
+                        Title = "Still Mine",
+                        ReleaseDate = DateTime.Parse("2012-09-10"),
+                        Genre = "Romantic",
+                        Rating = "PG-13",
+                        Price = 3.99M,
+                        Image_ID = "still_mine.jpg"
                     }
                 );
                 context.SaveChanges();

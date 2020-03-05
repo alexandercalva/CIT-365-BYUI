@@ -6,7 +6,7 @@
 
 <h1>Create</h1>
 
-<h4>Movie</h4>
+<h4>LDS Movie</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -24,7 +24,13 @@
             </div>
             <div class="form-group">
                 <label asp-for="Genre" class="control-label"></label>
-                <input asp-for="Genre" class="form-control" />
+                <select asp-for="Genre" name="genre" class="form-control">
+                    <option value="Romance">Romance</option>
+                    <option value="Documentary">Documentary</option>
+                    <option value="Drama">Drama</option>
+                    <option value="Educational">Educational</option>
+                    <option value="History">History</option>
+                </select>
                 <span asp-validation-for="Genre" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -36,6 +42,24 @@
                 <label asp-for="Rating" class="control-label"></label>
                 <input asp-for="Rating" class="form-control" />
                 <span asp-validation-for="Rating" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Image_ID" class="control-label"></label>
+                <select asp-for="Image_ID" name="Image_ID" class="form-control">
+                    <option value="the_best.jpg">LDS Movie</option>
+                    <option value="until_forever.jpg">Until Forever</option>
+                    <option value="state_of_grace.jpg">State of Grace</option>
+                    <option value="17_miracles.jpg">17_Miracles</option>
+                    <option value="still_mine.jpg">Still Mine</option>
+                    <option value="charly.jpg">Charly</option>
+                    <option value="polycarp.jpg">Polycarp</option>
+                    <option value="cokeville.jpg">The Cokeville Miracle</option>
+                    <option value="sperry.jpg">The Secrets of Jonathan Sperry</option>
+                    <option value="meet_the_mormons.jpg">Meet the Mormons</option>
+                    <option value="the_other_side_of_heaven.jpg">The Other Side of Heaven</option>
+
+                </select>
+                <span asp-validation-for="Image_ID" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />

@@ -8,10 +8,12 @@ namespace MyScriptureJournal.Models
 {
     public class Scripture
     {
+        // Create variables for model
         public int ID { get; set; }
         [DataType(DataType.Date)]
         public DateTime Date { get; set; }
-        public string Book { get; set; }
+        [Display(Name = "Book")]
+        public string BookModels { get; set; }
              
         public int Chapter { get; set; }
         public int Verse { get; set; }

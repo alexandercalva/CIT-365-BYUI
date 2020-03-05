@@ -25,7 +25,7 @@ namespace MyScriptureJournal
         }
 
         [BindProperty]
-        public Scripture Scripture { get; set; }
+        public Scripture Scripture_Create { get; set; }
 
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see https://aka.ms/RazorPagesCRUD.
@@ -36,7 +36,7 @@ namespace MyScriptureJournal
                 return Page();
             }
 
-            _context.Scripture.Add(Scripture);
+            _context.Scripture.Add(Scripture_Create);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");

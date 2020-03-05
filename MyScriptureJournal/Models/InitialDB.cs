@@ -24,7 +24,7 @@ namespace MyScriptureJournal.Models
                     new Scripture
                     {
                         Date = DateTime.Parse("2020-2-12"),
-                        Book = "1 Nephi",
+                        BookModels = "1 Nephi",
                         Chapter = 1,
                         Verse = 1,
                         Note = "I, Nephi, having been aborn of goodly parents"
@@ -32,7 +32,7 @@ namespace MyScriptureJournal.Models
                     new Scripture
                     {
                         Date = DateTime.Parse("2020-1-01"),
-                        Book = "2 Nephi",
+                        BookModels = "2 Nephi",
                         Chapter = 2,
                         Verse = 1,
                         Note = "Blessed art thou Lehi, because of the things which thou hast done;"
@@ -40,7 +40,7 @@ namespace MyScriptureJournal.Models
                    new Scripture
                    {
                        Date = DateTime.Parse("2020-1-02"),
-                       Book = "Jacob",
+                       BookModels = "Jacob",
                        Chapter = 2,
                        Verse = 1,
                        Note = "Ready to edit"
@@ -48,7 +48,7 @@ namespace MyScriptureJournal.Models
                     new Scripture
                     {
                         Date = DateTime.Parse("2020-1-03"),
-                        Book = "Enos",
+                        BookModels = "Enos",
                         Chapter = 1,
                         Verse = 1,
                         Note = "Ready to edit"
@@ -56,7 +56,7 @@ namespace MyScriptureJournal.Models
                      new Scripture
                      {
                          Date = DateTime.Parse("2020-1-05"),
-                         Book = "Jarom",
+                         BookModels = "Jarom",
                          Chapter = 1,
                          Verse = 1,
                          Note = "Ready to edit"
@@ -64,7 +64,7 @@ namespace MyScriptureJournal.Models
                       new Scripture
                       {
                           Date = DateTime.Parse("2020-1-06"),
-                          Book = "Omni",
+                          BookModels = "Omni",
                           Chapter = 1,
                           Verse = 1,
                           Note = "Ready to edit"
@@ -72,7 +72,7 @@ namespace MyScriptureJournal.Models
                        new Scripture
                        {
                            Date = DateTime.Parse("2020-1-09"),
-                           Book = "Mosiah",
+                           BookModels = "Mosiah",
                            Chapter = 2,
                            Verse = 1,
                            Note = "Ready to edit"
@@ -80,7 +80,7 @@ namespace MyScriptureJournal.Models
                         new Scripture
                         {
                             Date = DateTime.Parse("2020-1-20"),
-                            Book = "Alma",
+                            BookModels = "Alma",
                             Chapter = 2,
                             Verse = 1,
                             Note = "Ready to edit"

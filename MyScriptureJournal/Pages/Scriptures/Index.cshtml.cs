@@ -29,7 +29,7 @@ namespace MyScriptureJournal
         [BindProperty(SupportsGet = true)]
         public string SearchString { get; set; }
         // Requires using Microsoft.AspNetCore.Mvc.Rendering;
-        public SelectList Book { get; set; }
+        public SelectList BookSelectList { get; set; }
         [BindProperty(SupportsGet = true)]
         public string BookList { get; set; }
         [BindProperty(SupportsGet = true)]
@@ -42,7 +42,7 @@ namespace MyScriptureJournal
             // Use LINQ 
            
             IQueryable<string> BookQuery = from m in _context.Scripture
-                                            select m.Book;
+                                            select m.BookModels;
             IQueryable<string> NoteQuery = from m in _context.Scripture
                                            orderby m.Note
                                            select m.Note;
@@ -52,7 +52,7 @@ namespace MyScriptureJournal
             switch (sortOrder)
             {
                 case "book_desc":
-                    scriptures = scriptures.OrderByDescending(s => s.Book);
+                    scriptures = scriptures.OrderByDescending(s => s.BookModels);
                     break;
                 case "date_asc":
                     scriptures = scriptures.OrderBy(s => s.Date);
@@ -61,7 +61,7 @@ namespace MyScriptureJournal
                     scriptures = scriptures.OrderByDescending(s => s.Date);
                     break;
                 default:
-                    scriptures = scriptures.OrderBy(s => s.Book);
+                    scriptures = scriptures.OrderBy(s => s.BookModels);
                     break;
             }
 
@@ -75,7 +75,7 @@ namespace MyScriptureJournal
            
             if (!string.IsNullOrEmpty(SearchString))
             {
-                scriptures = scriptures.Where(s => s.Book.Contains(SearchString));
+                scriptures = scriptures.Where(s => s.BookModels.Contains(SearchString));
             }
             if (!string.IsNullOrEmpty(NoteSearch))
             {
@@ -85,9 +85,9 @@ namespace MyScriptureJournal
 
             if (!string.IsNullOrEmpty(BookList))
             {
-                scriptures = scriptures.Where(x => x.Book == BookList);
+                scriptures = scriptures.Where(x => x.BookModels == BookList);
             }
-             Book = new SelectList(await BookQuery.Distinct().ToListAsync());
+            BookSelectList = new SelectList(await BookQuery.Distinct().ToListAsync());
             //var DateSort = await DateSortQuery.Distinct().ToListAsync();
             //Note = new Search(await NoteQuery.Distinct().ToListAsync());
 
